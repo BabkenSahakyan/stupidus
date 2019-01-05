@@ -23,13 +23,9 @@ def rand_matrix(column_count, row_count, max_values):
     return np.transpose(matrix)
 
 
-def _boolean_and(bool1, bool2):
-    return bool1 and bool2
-
-
 def validate(sum_array):
     bool_array = sum_array < omega  # array off booleans
-    return functools.reduce(_boolean_and, bool_array)
+    return False not in bool_array
 
 
 if __name__ == '__main__':
